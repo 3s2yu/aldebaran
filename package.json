@@ -1,0 +1,19 @@
+{
+  "name": "aldebaran",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/org-3s2yu/aldebaran.git"
+  },
+  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/org-3s2yu/aldebaran/issues"
+  },
+  "homepage": "https://github.com/org-3s2yu/aldebaran#readme"
+}
