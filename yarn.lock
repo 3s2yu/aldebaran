@@ -4628,6 +4628,10 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-native-contacts@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-contacts/-/react-native-contacts-5.0.4.tgz#fc3049b0bcc1f3e22a2f7b15a5ae678bd229249e"
+
 react-native-gesture-handler@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"
