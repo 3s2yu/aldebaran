@@ -1,27 +1,31 @@
 import React, { Component } from "react";
-import {
-  PermissionsAndroid,
-  Platform,
-  View,
-  Text
-} from "react-native";
+import { PermissionsAndroid, Platform } from "react-native";
 import Contacts from 'react-native-contacts';
-
 import styled from 'styled-components/native';
+
+import { Avatar, Button } from './index';
 
 const ContainerView = styled.View`
   flex: 1;
-  justifyContent: center;
-  alignItems: center;
 `;
 
 const List = styled.View`
-  marginBottom: 40;
+  background: #ff0000;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
 `;
 
-const TitleText = styled.Text`
+const Name = styled.Text`
   fontSize: 18;
+  margin-left: 10px;
   textAlign: center;
+`;
+
+const Social = styled.View`
+  background-color: #cccccc;
+  flex-direction: row;
+  width: 100%;
 `;
 
 class ContactsList extends Component {
@@ -29,7 +33,7 @@ class ContactsList extends Component {
     super(props);
 
     this.state = {
-      contacts: []
+      contacts: [],
     };
   }
 
@@ -51,7 +55,6 @@ class ContactsList extends Component {
       if (err === "denied") {
         console.warn("A permissão para acessar contatos foi negada");
       } else {
-        //alert(contacts[0].familyName)
         this.setState({ contacts });
       }
     });
@@ -62,9 +65,26 @@ class ContactsList extends Component {
       <ContainerView>
         {this.state.contacts.map(contact => {
           return (
-            <List>
-              <TitleText>{contact.givenName} {contact.familyName}</TitleText>
+            <List key={contact.recordID}>
+              <Avatar hasThumbnail={contact.hasThumbnail} thumbnailPath={contact.thumbnailPath} />
+              <Name>{contact.givenName} {contact.familyName}</Name>
+              <Social>
+                <Button bg="#ff00ff">@</Button>
+                <Button bg="#ffcc00">F</Button>
+                <Button bg="#00bbee">T</Button>
+              </Social>
+              {/* <TitleText>{contact.jobTitle}</TitleText>
+              <TitleText>{contact.note}</TitleText>
               <TitleText>{contact.company || '---'}</TitleText>
+              {contact.phoneNumbers.map(item => {
+                <TitleText>{item.label} {item.number}</TitleText>
+              })}
+              {contact.emailAddresses.map(item => {
+                <TitleText>{item.label} {item.email}</TitleText>
+              })}
+              {contact.urlAddresses.map(item => {
+                <TitleText>{item.label} {item.url}</TitleText>
+              })} */}
             </List>
           );
         })}

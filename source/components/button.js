@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
-import { withTheme } from 'styled-components';
 import styled from 'styled-components/native';
 
-const ButtonContainer = styled.TouchableHighlight`
-  width: 130;
-  height: 40;
-  borderRadius: 5;
+class Button extends Component {
+  static defaultProps = {
+    bg: '#ff00ff',
+    underlayColor: '#fff',
+  }
+
+  render() {
+    const { children, onPress, theme, bg, underlayColor } = this.props;
+
+    return (
+      <ButtonView underlayColor={underlayColor} onPress={onPress} bg={bg}>
+        <Text>{children}</Text>
+      </ButtonView>
+    );
+  }
+}
+
+const ButtonView = styled.TouchableHighlight`
+  background-color: ${props => props.bg};
+  borderRadius: 4;
+  height: 50;
   justifyContent: center;
   alignItems: center;
+  width: 50;
 `;
 
 const Text = styled.Text`
   fontSize: 20;
 `;
 
-class Button extends Component {
-  render() {
-    const { text, onPress, theme } = this.props;
-
-    return (
-      <ButtonContainer underlayColor={{}} onPress={onPress}>
-        <Text>{text}</Text>
-      </ButtonContainer>
-    );
-  }
-}
-
-export default withTheme(Button);
+export default Button;

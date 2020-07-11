@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
-import { Contacts } from '../components';
+import { Contacts, Header } from '../components';
 
 class HomeScreen extends Component {
   render() {
-    return <Contacts />;
+    return (
+      <>
+        <Header />
+        <Contacts />
+      </>
+    );
   }
 }
 

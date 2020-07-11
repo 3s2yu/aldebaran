@@ -4,14 +4,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/org-3s2yu/aldebaran.git"
+    "url": "git+https://github.com/3s2yu/aldebaran.git"
   },
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/org-3s2yu/aldebaran/issues"
+    "url": "https://github.com/3s2yu/aldebaran/issues"
   },
-  "homepage": "https://github.com/org-3s2yu/aldebaran#readme",
+  "homepage": "https://github.com/3s2yu/aldebaran#readme",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
